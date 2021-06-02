@@ -16,6 +16,7 @@ p {
     --whale-skin: lightgray;
     --whale-shadow: gray;
     --whale-belly: white;
+    --whale-outline: darkgray;
 }
     
 @media (max-width: 350px) {
@@ -45,7 +46,8 @@ p {
     top: 28%;
     left: 22%;
     background: var(--whale-skin, gray);
-    border: 1px solid darkgray;
+    /* border: 1px solid var(--whale-outline, darkgray); */
+    box-shadow: 1px 1px 11px 5px var(--whale-outline) inset;
     width: 55%;
     height: 50%;
     /* border-radius: 70% 70% 60% 60%; */
@@ -54,9 +56,9 @@ p {
 }
 .blowhole {
     top: 6%;
-    left: 47%;
+    left: 45%;
     background: var(--whale-shadow, gray);
-    width: 9%;
+    width: 11%;
     height: 3%;
     border-radius: 50%;
 }
@@ -71,18 +73,21 @@ p {
     /* border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; */
     border-radius: 120% 120% 100% 100% / 115% 115% 75% 75%;
 }
+
+/* TAIL STYLES */
 .tail {
     top: 10%;
     left: 85%;
     background: var(--whale-skin, black);
     width: 30%;
     height: 80%;
+    /* border: 1px solid var(--whale-outline, darkgray); */
     border-radius: 49% 51% 49% 51% / 9% 9% 91% 91%;
     /* border-radius: 120% 120% 100% 100% / 115% 115% 215% 215%; */
     transform: rotate(160deg);
     z-index: -1;
     animation-duration: 10s;
-    /* animation-name: flap; */
+    animation-name: flap;
     animation-iteration-count: infinite;
     transform-origin: 0% 0%;
     animation-timing-function: linear;
@@ -91,7 +96,7 @@ p {
     top: 80%;
     left: 80%;
     background: var(--whale-skin, black);
-    width: 40%;
+    width: 50%;
     height: 70%;
     border-radius: 30% 30% 120% 30%;
     transform: rotate(302deg);
@@ -106,7 +111,7 @@ p {
     top: 78%;
     left: -45%;
     background: var(--whale-skin, black);
-    width: 40%;
+    width: 50%;
     height: 70%;
     border-radius: 30% 30% 30% 120%;
     transform: rotate(60deg);
@@ -125,13 +130,15 @@ p {
         transform: rotate(250deg);
     } */
     30% {
-        transform: rotate(200deg);
+        transform: rotate(150deg);
     }
     40% {
-        transform: rotate(250deg);
+        transform: rotate(200deg);
     }
 }
+/* END TAIL STYLES */
 
+/* FLIPPERS STYLES */
 .right-flipper {
     top: 25%;
     left: 5%;
@@ -164,30 +171,54 @@ p {
 }
 
 .left-flipper {
-    top: 25%;
-    left: 90%;
+    top: 45%;
+    left: 78%;
     background: var(--whale-skin, lightgray);
     width: 25%;
     height: 50%;
     border-radius: 30% 30% 30% 120%;
     transform: rotate(-45deg);
     z-index: -1;
+    animation-duration: 3s;
+    animation-name: left-wave;
+    animation-iteration-count: infinite;
+    transform-origin: 0% 0%;
+    animation-timing-function: linear;
 }
+@keyframes left-wave {
+    10% {
+        transform: rotate(-30deg);
+    }
+    20% {
+        transform: rotate(-45deg);
+    }
+    30% {
+        transform: rotate(-30deg);
+    }
+    40% {
+        transform: rotate(-45deg);
+    }
+}
+/* END FLIPPERS STYLES */
+
+/* EYES STYLES */
 .right-eye {
     top: 65%;
-    left: 70%;
+    left: 72%;
     background: black;
     width: 15%;
     height: 17%;
     border-radius: 50%;
+    transform: rotate(-5deg);
 }
 .left-eye {
     top: 65%;
-    left: 15%;
+    left: 13%;
     background: black;
     width: 15%;
     height: 17%;
     border-radius: 50%;
+    transform: rotate(5deg);
 }
   
 .sparkle {
