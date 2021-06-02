@@ -1,0 +1,227 @@
+/* BODY STYLES */
+body {
+    font-size: 16px;
+}
+  
+/* HEADER STYLES */
+h1,
+p {
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+  
+/* WHALE STYLES */
+:root {
+    --whale-size: 300px;
+    --whale-skin: lightgray;
+    --whale-shadow: gray;
+    --whale-belly: white;
+}
+    
+@media (max-width: 350px) {
+    :root {
+        --whale-size: 200px;
+        --whale-skin: black;
+    }
+}
+    
+.whale {
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    width: var(--whale-size, 300px);
+    height: var(--whale-size, 300px);
+}
+.belly {
+    top: -14%;
+    left: -1.5%;
+    background: var(--whale-shadow, gray);
+    width: 103%;
+    height: 100%;
+    border-radius: 120% 120% 100% 100% / 115% 115% 65% 65%;
+}
+.whale-top {
+    top: 28%;
+    left: 22%;
+    background: var(--whale-skin, gray);
+    border: 1px solid darkgray;
+    width: 55%;
+    height: 50%;
+    /* border-radius: 70% 70% 60% 60%; */
+    border-radius: 120% 120% 100% 100% / 145% 145% 45% 45%;
+    /* border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; */
+}
+.blowhole {
+    top: 6%;
+    left: 47%;
+    background: var(--whale-shadow, gray);
+    width: 9%;
+    height: 3%;
+    border-radius: 50%;
+}
+    
+.whale-bottom {
+    top: 43%;
+    left: 23.5%;
+    background: var(--whale-belly, white);
+    width: 53%;
+    height: 45%;
+    /* border-radius: 70% 70% 100% 100%; */
+    /* border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; */
+    border-radius: 120% 120% 100% 100% / 115% 115% 75% 75%;
+}
+.tail {
+    top: 10%;
+    left: 85%;
+    background: var(--whale-skin, black);
+    width: 30%;
+    height: 80%;
+    border-radius: 49% 51% 49% 51% / 9% 9% 91% 91%;
+    /* border-radius: 120% 120% 100% 100% / 115% 115% 215% 215%; */
+    transform: rotate(160deg);
+    z-index: -1;
+    animation-duration: 10s;
+    /* animation-name: flap; */
+    animation-iteration-count: infinite;
+    transform-origin: 0% 0%;
+    animation-timing-function: linear;
+}
+.right-fluke {
+    top: 80%;
+    left: 80%;
+    background: var(--whale-skin, black);
+    width: 40%;
+    height: 70%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(302deg);
+    z-index: -1;
+    /* animation-duration: 5s;
+    animation-name: flap;
+    animation-iteration-count: infinite;
+    transform-origin: 0% 0%;
+    animation-timing-function: linear; */
+}
+.left-fluke {
+    top: 78%;
+    left: -45%;
+    background: var(--whale-skin, black);
+    width: 40%;
+    height: 70%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(60deg);
+    z-index: -1;
+    /* animation-duration: 5s;
+    animation-name: flap;
+    animation-iteration-count: infinite;
+    transform-origin: 0% 0%;
+    animation-timing-function: linear; */
+}
+@keyframes flap {
+    /* 10% {
+        transform: rotate(200deg);
+    }
+    20% {
+        transform: rotate(250deg);
+    } */
+    30% {
+        transform: rotate(200deg);
+    }
+    40% {
+        transform: rotate(250deg);
+    }
+}
+
+.right-flipper {
+    top: 25%;
+    left: 5%;
+    background: var(--whale-skin, black);
+    width: 25%;
+    height: 50%;
+    border-radius: 30% 30% 120% 30%;
+    /* transform: rotate(130deg); */
+    transform: rotate(45deg);
+    z-index: -1;
+    animation-duration: 3s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    transform-origin:0% 0%;
+    animation-timing-function: linear;
+}
+@keyframes wave {
+    10% {
+        transform: rotate(30deg);
+    }
+    20% {
+        transform: rotate(45deg);
+    }
+    30% {
+        transform: rotate(30deg);
+    }
+    40% {
+        transform: rotate(45deg);
+    }
+}
+
+.left-flipper {
+    top: 25%;
+    left: 90%;
+    background: var(--whale-skin, lightgray);
+    width: 25%;
+    height: 50%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+.right-eye {
+    top: 65%;
+    left: 70%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+}
+.left-eye {
+    top: 65%;
+    left: 15%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+}
+  
+.sparkle {
+    top: 25%;
+    left: 15%;
+    background: white;
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+    animation-name: stare;
+    animation-duration: 2.5s;
+}
+  .smize {
+    top: 65%;
+    left: -23%;
+    background: var(--whale-skin, lightgray);
+    width: 150%;
+    height: 60%;
+    border-radius: 50%;
+  }
+
+
+body {
+    background:#ffed89;
+}
+    
+.whale * {
+    position: absolute;
+}
+
+/* END WHALE STYLES */
+  
+/* FOOTER STYLES */
+footer {
+    padding-top: 7em;
+    font-size: .75em;
+}
