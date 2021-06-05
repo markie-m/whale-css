@@ -44,10 +44,10 @@ p {
 }
 .whale-top {
     top: 28%;
-    left: 22%;
+    left: 22.5%;
     background: var(--whale-skin, gray);
     /* border: 1px solid var(--whale-outline, darkgray); */
-    box-shadow: 1px 1px 11px 5px var(--whale-outline) inset;
+    /* box-shadow: 1px 1px 11px 5px var(--whale-outline) inset; */
     width: 55%;
     height: 50%;
     /* border-radius: 70% 70% 60% 60%; */
@@ -143,11 +143,14 @@ p {
     top: 25%;
     left: 5%;
     background: var(--whale-skin, black);
-    width: 25%;
-    height: 50%;
+    /* width: 25%; */
+    width: 20%;
+    height: 40%;
+    /* height: 50%; */
     border-radius: 30% 30% 120% 30%;
     /* transform: rotate(130deg); */
-    transform: rotate(45deg);
+    /* transform: rotate(45deg); */
+    transform: rotate(60deg); 
     z-index: -1;
     animation-duration: 3s;
     animation-name: wave;
@@ -157,16 +160,20 @@ p {
 }
 @keyframes wave {
     10% {
-        transform: rotate(30deg);
+        /* transform: rotate(30deg); */
+        transform: rotate(45deg);
     }
     20% {
-        transform: rotate(45deg);
+        /* transform: rotate(45deg); */
+        transform: rotate(60deg);
     }
     30% {
-        transform: rotate(30deg);
+        /* transform: rotate(30deg); */
+        transform: rotate(45deg);
     }
     40% {
-        transform: rotate(45deg);
+        /* transform: rotate(45deg); */
+        transform: rotate(60deg);
     }
 }
 
