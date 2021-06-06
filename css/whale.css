@@ -179,12 +179,12 @@ p {
 
 .left-flipper {
     top: 45%;
-    left: 78%;
+    left: 85%;
     background: var(--whale-skin, lightgray);
-    width: 25%;
-    height: 50%;
+    width: 20%;
+    height: 40%;
     border-radius: 30% 30% 30% 120%;
-    transform: rotate(-45deg);
+    transform: rotate(-60deg);
     z-index: -1;
     animation-duration: 3s;
     animation-name: left-wave;
@@ -194,16 +194,20 @@ p {
 }
 @keyframes left-wave {
     10% {
-        transform: rotate(-30deg);
+        /* transform: rotate(-30deg); */
+        transform: rotate(-45deg);
     }
     20% {
-        transform: rotate(-45deg);
+        /* transform: rotate(-45deg); */
+        transform: rotate(-60deg);
     }
     30% {
-        transform: rotate(-30deg);
+        /* transform: rotate(-30deg); */
+        transform: rotate(-45deg);
     }
     40% {
-        transform: rotate(-45deg);
+        /* transform: rotate(-45deg); */
+        transform: rotate(-60deg);
     }
 }
 /* END FLIPPERS STYLES */
